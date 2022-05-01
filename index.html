@@ -40,8 +40,28 @@
             <div class="container">
                 
             <h1 class="box-word">Эффективные решения для вашего бизнеса</h1>
-            <button type="button" class="button-word">Заказать услугу</button>
+
+
+
+            <button type="button" class="button-word" data-modal-open>Заказать услугу</button>
+
+            <div class="backdrop" data-modal>
+                
+                <div class="modal">
+                    <button class="close-button" data-modal-close>
+                        <svg class="size-close-button">
+                            <use href="./images/icons.svg#icon-close"></use>
+                        </svg>
+                    </button>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio ipsum architecto ullam omnis illo dolore at, recusandae earum illum temporibus ducimus obcaecati, dolores error iure commodi in expedita soluta veniam!
+                    </p>
+                
+                </div>
             </div>
+
+
+             </div>
         </section>
 
             <section class="benefits-section">
@@ -354,7 +374,7 @@
         </div>
         
     </footer>
-
+<script src="./js/modal.js"></script>
 </body>
 
 </html>

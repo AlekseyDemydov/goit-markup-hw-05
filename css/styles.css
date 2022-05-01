@@ -178,10 +178,10 @@ margin-right: 10px;
   
   
 }
-/* .box-section::before{
-    background-color: rgba(47, 48, 58, 0.4);
-} */
+
 .box-word{
+
+    
     font-family: 'Roboto';
     font-style: normal;
     width: 696px;
@@ -198,15 +198,52 @@ margin-right: 10px;
     color: var(--background-color);
 }
 
-.box-section button{
+.backdrop{
+    position: fixed;
+    top: 0;
+    
+    
+    width: 1600px;
+    height: 1024px;
+    background-color: rgba(0, 0, 0, 0.6);
+}    
+.backdrop.is-hidden{
+    opacity: 0;
+    pointer-events: none;
+}
+.modal{
+    width: 528px;
+    height: 581px;
+    background-color: rgba(255, 255, 255, 1);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.close-button{
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: var(--background-color);
+}
+.size-close-button{
+    width: 18px;
+    height: 18px;
+}
+
+
+.button-word{
     width: 200px;
     height: 50px;
     margin-top: 30px;
     background: var(--button-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
-}
-.button-word{
+
     font-family: 'Roboto';
     font-style: normal;
 font-weight: 700;
