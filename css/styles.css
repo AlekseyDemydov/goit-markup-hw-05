@@ -566,14 +566,14 @@ padding: 6px 22px;
 .button-portfolio li:last-child{
     padding-right: 0;
 }
-.net article:hover{
-    opacity: 1;
+.net article:hover {
+    
 box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
 0px 1px 2px rgba(0, 0, 0, 0.08),
 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-.net article:focus {
-    opacity: 1;
+.net article .karta:focus{
+    
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
         0px 1px 2px rgba(0, 0, 0, 0.08),
         0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -582,9 +582,7 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
     background: var(--btn-color2);
     border-radius: 4px;
 
-    /* box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
-    0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12); */
+   
 }
 .button-portfolio button:hover,
 .button-portfolio button:focus{
@@ -599,7 +597,62 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
     margin: 0 0 50px 0;
     
 }
+.karta{
+  
+    margin-left: 30px;
+    margin-top: 30px;
+    max-width: 370px;
+    flex-basis: calc((100% - 90px) / 3);
+    background: var(--background-color);
+    border: 1px solid #EEEEEE;
+    box-sizing: border-box;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.overlay{
+    position: relative;
+    padding: 0;
+}
+.overlay::before{
+    display: inline-block;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 294px;
+    background-color: rgba(33, 150, 243, 0.9);
+    opacity: 0;
+}
+.net a:hover .overlay::before,
+.net a:focus .overlay::before
+{
+    opacity: 1;
+}
+
+.action-name{
+
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 28px;
+/* or 156% */
+
+letter-spacing: 0.03em;
+
+color: var(--btn-color2);
+opacity: 0;
+width: 322px;
+height: 168px;
+}
+.net a:hover .action-name,
+.net a:focus .action-name{
+    opacity: 1;
+}
 .net{
+    
     display: flex;
     flex-wrap: wrap;
     margin-left: -30px;
@@ -607,19 +660,9 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
     padding: 0;
     list-style: none;
 }
-.net article{
-    position: relative;
-    margin-left: 30px;
-    margin-top: 30px;
-    max-width: 370px;  
-    flex-basis: calc((100% - 90px) / 3);
-    background: var(--background-color);
-    border: 1px solid #EEEEEE;
-    box-sizing: border-box;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    }
+
     
-   .net div{
+.action-name1{
     padding: 20px 24px;
    }
 
@@ -636,39 +679,6 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
     margin-bottom: 4px;
 }
 
-.action-name{
-    content: '';
-    
-    top: 0;
-    right: 0;
-    height: 294px;
-    width: 100%;
-    
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 28px;
-    /* or 156% */
-    
-    letter-spacing: 0.03em;
-    
-    color: var(--background-color);
-    background: rgba(33, 150, 243, 0.9);
-    justify-content: center;
-    align-items: center;
-    letter-spacing: 0.03em;
-    opacity: 0;
-
-    transition-property: opacity;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    
-}
-.action-name:hover,
-.action-name:focus{
-    opacity: 1;
-}
 
 
 
