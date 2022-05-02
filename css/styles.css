@@ -566,13 +566,13 @@ padding: 6px 22px;
 .button-portfolio li:last-child{
     padding-right: 0;
 }
-.net article:hover {
+.karta:hover {
     
 box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
 0px 1px 2px rgba(0, 0, 0, 0.08),
 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-.net article .karta:focus{
+.karta:focus{
     
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
         0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -598,20 +598,26 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
     
 }
 .karta{
-  
+    display: inline-block;
+  align-items: center;
+  justify-content: center;
     margin-left: 30px;
     margin-top: 30px;
-    max-width: 370px;
+    min-width: 370px;
     flex-basis: calc((100% - 90px) / 3);
     background: var(--background-color);
     border: 1px solid #EEEEEE;
     box-sizing: border-box;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
+    
 }
 .overlay{
     position: relative;
     padding: 0;
+    overflow: hidden;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .overlay::before{
     display: inline-block;
     content: '';
@@ -619,16 +625,20 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
     width: 100%;
     height: 294px;
     background-color: rgba(33, 150, 243, 0.9);
+    transform: translateY(100%);
     opacity: 0;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.net a:hover .overlay::before,
-.net a:focus .overlay::before
+.karta:hover .overlay::before, 
+.karta:focus .overlay::before
 {
+    transform: translateY(0);
     opacity: 1;
 }
 
 .action-name{
-
+justify-content: center;
+text-align: center;
 position: absolute;
 top: 50%;
 left: 50%;
@@ -643,12 +653,15 @@ line-height: 28px;
 letter-spacing: 0.03em;
 
 color: var(--btn-color2);
+
 opacity: 0;
+
 width: 322px;
 height: 168px;
 }
-.net a:hover .action-name,
-.net a:focus .action-name{
+.karta:hover .action-name,
+.karta:focus .action-name{
+    
     opacity: 1;
 }
 .net{
